@@ -13,7 +13,9 @@ module.exports = (robot) ->
 
   robot.hear /send_activate_whispers_command/i, (res) ->
     console.log("Activating whispers...")
-    res.send "/CAP REQ :twitch.tv/tags"
+    command = "/CAP REQ :twitch.tv/tags"
+    res.send command
+    res.send "Sent command: \"#{command}\""
 
   # TODO: The following should only apply in whisper mode
   robot.hear /I like pie/i, (res) ->
