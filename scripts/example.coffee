@@ -9,7 +9,10 @@
 #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 
 module.exports = (robot) ->
-
+  console.log("XXXXX Loaded example script")
+  robot.on "Ready", ()->
+    console.log("XXXXX GOT A READY CALLBACK")
+    robot.send("I'm ready!")
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
