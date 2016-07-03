@@ -10,12 +10,11 @@
 
 module.exports = (robot) ->
   console.log("XXXXX Loaded example script")
-  robot.on "Ready", ()->
-    console.log("XXXXX GOT A READY CALLBACK")
-    robot.send("I'm ready!")
-  # robot.hear /badger/i, (res) ->
-  #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
-  #
+
+  robot.hear /send_activate_whispers_command/i, (res) ->
+    console.log("Activating whipsers...")
+    res.send "/CAP REQ :twitch.tv/tags"
+
   # robot.respond /open the (.*) doors/i, (res) ->
   #   doorType = res.match[1]
   #   if doorType is "pod bay"

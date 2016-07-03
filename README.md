@@ -42,7 +42,14 @@ bin/hubot -a irc
 
 ### Deploying to Heroku
 
+Connect to your heroku
 ```shell
+ heroku git:remote -a apology-bot
+```
+
+If you haven't set up your config, set them up here
+```shell
+heroku config:add HUBOT_IRC_PASSWORD="YOUR OAUTH PASSWORD"
 heroku config:add HUBOT_IRC_SERVER="irc.chat.twitch.tv"
 heroku config:add HUBOT_IRC_ROOMS="#apology_bot"
 heroku config:add HUBOT_IRC_NICK="apology_bot"
