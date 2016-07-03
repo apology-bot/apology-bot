@@ -12,7 +12,7 @@ module.exports = (robot) ->
   console.log("XXXXX Loaded example script")
 
   robot.hear /send_activate_whispers_command/i, (res) ->
-    console.log("Activating whipsers...")
+    console.log("Activating whispers...")
     res.send "/CAP REQ :twitch.tv/tags"
 
   # TODO: The following should only apply in whisper mode
