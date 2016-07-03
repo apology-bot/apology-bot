@@ -15,6 +15,10 @@ module.exports = (robot) ->
     console.log("Activating whipsers...")
     res.send "/CAP REQ :twitch.tv/tags"
 
+  # TODO: The following should only apply in whisper mode
+  robot.hear /I like pie/i, (res) ->
+    res.send "makes a freshly baked pie"
+
   # robot.respond /open the (.*) doors/i, (res) ->
   #   doorType = res.match[1]
   #   if doorType is "pod bay"
@@ -22,8 +26,7 @@ module.exports = (robot) ->
   #   else
   #     res.reply "Opening #{doorType} doors"
   #
-  # robot.hear /I like pie/i, (res) ->
-  #   res.emote "makes a freshly baked pie"
+
   #
   # lulz = ['lol', 'rofl', 'lmao']
   #
